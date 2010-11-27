@@ -22,6 +22,11 @@ if [ -a "${HASHTREEFILENAME}" ]; then
   rm -f "${HASHTREEFILENAME}"
 fi
 echo writing file hash sums...
-find . -type f -print0 | xargs -0 -L1 sha512sum > "${HASHTREEFILENAME}"
+find . -type f\
+  \! -path "${TREEFILENAME}"\
+  \! -path "${TREEFILENAME}".asc\
+  \! -path "${HASHTREEFILENAME}"\
+  \! -path "${HASHTREEFILENAME}".asc -print0 |\
+  xargs -0 -L1 sha512sum > "${HASHTREEFILENAME}"
 # sign hashes
 gpg -a -s "${HASHTREEFILENAME}"
