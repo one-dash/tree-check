@@ -10,7 +10,8 @@ whatever bad people could do to them.
 Utils you'll need to run the scripts: bash, find, xargs, fgrep, GnuPG, sha512
 
 Files:
-  tree-paths.sh -- variables for configuring
+  tree-paths.sh -- common things. You don't need to run this
   tree-write.sh -- script only for writing tree
+  tree-check.sh -- check what happened to your tree of files
 
-don't forget to put scripts on your $PATH!
+don't forget to put scripts on your $PATH and chmod them +x
