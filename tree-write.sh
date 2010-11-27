@@ -3,11 +3,6 @@
 # exit on any error
 set -e
 
-which find
-which gpg
-which xargs
-which sha512sum
-
 source "$(which tree-paths.sh)"
 
 # generate tree
