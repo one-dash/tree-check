@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# exit on any error
-set -e
-
 source "$(which tree-paths.sh)"
 
 # generate tree
