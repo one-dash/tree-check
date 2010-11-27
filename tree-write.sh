@@ -2,12 +2,17 @@
 
 source "$(which tree-paths.sh)"
 
-# generate tree
+# generate tree excluding tree, hashes and signature
 if [ -a "${TREEFILENAME}" ]; then
   rm -f "${TREEFILENAME}"
 fi
 echo generating tree...
-find . -type f | sort > "${TREEFILENAME}"
+find . -type f | \
+  fgrep -v "${TREEFILENAME}" | \
+  fgrep -v "${TREEFILENAME}".asc | \
+  fgrep -v "${HASHTREEFILENAME}" | \
+  fgrep -v "${HASHTREEFILENAME}".asc | \
+  sort > "${TREEFILENAME}"
 # sign tree. The signing happens w/ the default key. You are asked about your
 # password
 echo signing tree...
