@@ -2,6 +2,8 @@
 
 source "$(which tree-paths.sh)"
 
+which xargs
+
 # generate tree excluding tree, hashes and signature
 if [ -a "${TREEFILENAME}" ]; then
   rm -f "${TREEFILENAME}"

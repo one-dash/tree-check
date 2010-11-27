@@ -7,7 +7,6 @@ set -e
 which find
 which fgrep
 which gpg
-which xargs
 which sha512sum
 
 # default file names
