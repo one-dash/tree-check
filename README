@@ -8,3 +8,7 @@ you must remove all files from it as all of them were infected, corrupted or
 whatever bad people could do to them.
 
 Utils you'll need to run the scripts: bash, find, xargs, GnuPG, sha512
+
+Files:
+  tree-paths.sh -- variables for configuring
+  tree-write.sh -- script only for writing tree
