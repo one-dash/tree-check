@@ -5,6 +5,7 @@ set -e
 
 # check whether user has these utils
 which find
+which fgrep
 which gpg
 which xargs
 which sha512sum
