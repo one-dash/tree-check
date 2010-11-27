@@ -12,3 +12,5 @@ Utils you'll need to run the scripts: bash, find, xargs, GnuPG, sha512
 Files:
   tree-paths.sh -- variables for configuring
   tree-write.sh -- script only for writing tree
+
+don't forget to put scripts on your $PATH!
