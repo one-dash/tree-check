@@ -6,3 +6,5 @@ These scripts were created for KISS. On any filesystem, it will work. Once you
 can't file your tree, hash or signature files, think that your stick got PWND,
 you must remove all files from it as all of them were infected, corrupted or
 whatever bad people could do to them.
+
+Utils you'll need to run the scripts: bash, find, xargs, GnuPG, sha512
