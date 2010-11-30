@@ -3,6 +3,7 @@
 source $(which tree-paths.sh)
 
 which diff
+which more
 
 # check hashes signature
 gpg --verify "${HASHTREEFILENAME}".asc
@@ -19,7 +20,7 @@ find . -type f | \
   sort | \
   diff --suppress-common-lines -u \
     --label 'previous tree' "${TREEFILENAME}" \
-    --label 'current tree' -
+    --label 'current tree' - | more
 
 # check hashes
 echo checking hashes...
